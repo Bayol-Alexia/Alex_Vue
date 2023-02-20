@@ -7,6 +7,7 @@ const emit = defineEmits(["rechercheLivre"]);
 
 
 <template>
+  <hr>
   <form @submit.prevent="$emit('rechercheLivre', val)">
     <h4>Rechercher un livre ?</h4>
     <p>Veuillez renseigner le titre du livre.</p>
@@ -22,10 +23,29 @@ const emit = defineEmits(["rechercheLivre"]);
 <style scoped>
 h4 {
   color: rgb(38, 90, 38);
-  margin-top: 120px;
+  margin-top: 20px;
 }
 
 p {
   color: seagreen;
+}
+
+
+hr {
+  border: none;
+  border-top: 3px double black;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  margin-top: 120px;
+}
+
+hr:after {
+  background: #fff;
+  content: 'POUR ALLER PLUS VITE';
+  color: green;
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
 }
 </style>

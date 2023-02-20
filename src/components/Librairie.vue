@@ -159,6 +159,9 @@ function handlerDecrementer(livre) {
 <style scoped>
 h4 {
   color: rgb(38, 90, 38);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 </style>
 
