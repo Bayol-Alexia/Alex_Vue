@@ -21,13 +21,18 @@ const emit = defineEmits(["rechercheLivre"]);
 </template>
 
 <style scoped>
+
+
+
 h4 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: lightgrey;
   margin-top: 20px;
   font-size: 20px;
 }
 
 p {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: lightgoldenrodyellow;
 }
 

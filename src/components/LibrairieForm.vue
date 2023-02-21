@@ -54,12 +54,14 @@ const emit = defineEmits(["addLivre"]);
 
 <style scoped>
 h4 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: rgb(38, 90, 38);
   margin-top: 20px;
   font-size: 20px;
 }
 
 p {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: darkgreen;
 }
 

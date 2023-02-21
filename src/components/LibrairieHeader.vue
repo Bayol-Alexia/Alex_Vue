@@ -22,6 +22,8 @@
 </template>
 
 <style scoped>
+
+
 .bandeau {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -84,6 +86,7 @@ h1 {
 }
 
 p {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: darkgreen;
   text-align: center;
   font-weight: bold;

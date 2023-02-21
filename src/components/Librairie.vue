@@ -158,6 +158,7 @@ function handlerDecrementer(livre) {
 
 <style scoped>
 h4 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: rgb(38, 90, 38);
   margin-top: 20px;
   margin-bottom: 20px;

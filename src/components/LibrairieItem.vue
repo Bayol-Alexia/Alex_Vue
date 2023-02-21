@@ -35,6 +35,7 @@ button{
   }
 
   ul li {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     padding-left: 2rem;
     line-height: 2;
     background-image: url(Livre_ouvert.svg.png);
