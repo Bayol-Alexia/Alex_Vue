@@ -161,6 +161,7 @@ h4 {
   color: rgb(38, 90, 38);
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 </style>

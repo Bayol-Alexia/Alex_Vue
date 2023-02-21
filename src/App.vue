@@ -9,4 +9,8 @@ import LibrairieHeader from "./components/LibrairieHeader.vue";
 </template>
 
 <style>
+body{
+  background-image: url("fond_vert.jpg");
+  background-size: cover;
+}
 </style>

@@ -13,7 +13,7 @@
 
     <p>Venez découvrir la sélection de livres que nous proposons. Des livres auxquels vous ne pouvez pas résister. Des livres qui vont vous faire voyager et vous faire rêver. Les étagères sont pleines alors n'hésitez plus :
     </p>
-    <p class="slogan">TROUVER VOTRE FUTUR VOYAGE !</p>
+    <p class="slogan">TROUVEZ VOTRE FUTUR VOYAGE !</p>
    <hr>
   </div>
 
@@ -44,8 +44,9 @@
   }
 
   hr:after {
-    background: #fff;
+    background: floralwhite;
     content: 'LA COLLECTION';
+    font-size : 20px;
     color : green;
     padding: 0 4px;
     position: relative;
@@ -62,7 +63,7 @@
 
   blockquote p {
     padding: 15px;
-    background: #eee;
+    background: floralwhite;
     border-radius: 5px;
   }
 
@@ -79,7 +80,7 @@
   }
   
   p {
-    color: seagreen;
+    color: darkgreen;
     text-align: center;
   }
   </style>

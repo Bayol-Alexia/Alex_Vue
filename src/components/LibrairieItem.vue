@@ -41,5 +41,8 @@ button{
     background-position: 0 0;
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
+    color: black;
+    font-weight: bold;
   }
+
 </style>

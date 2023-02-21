@@ -22,12 +22,13 @@ const emit = defineEmits(["rechercheLivre"]);
 
 <style scoped>
 h4 {
-  color: rgb(38, 90, 38);
+  color: lightgrey;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 p {
-  color: seagreen;
+  color: lightgoldenrodyellow;
 }
 
 
@@ -41,8 +42,9 @@ hr {
 }
 
 hr:after {
-  background: #fff;
+  background: floralwhite;
   content: 'POUR ALLER PLUS VITE';
+  font-size : 20px;
   color: green;
   padding: 0 4px;
   position: relative;

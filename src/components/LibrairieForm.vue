@@ -7,7 +7,6 @@ const emit = defineEmits(["addLivre"]);
 </script>
 
 <template>
-  <img src="citation.jpg" alt="Citation"/>
   <hr>
   <form @submit.prevent="$emit('addLivre', titre, qtestock, prix)">
     <h4>Un nouveau livre à la collection ?</h4>
@@ -55,10 +54,11 @@ const emit = defineEmits(["addLivre"]);
 h4 {
   color: rgb(38, 90, 38);
   margin-top: 20px;
+  font-size: 20px;
 }
 
 p {
-  color: seagreen;
+  color: darkgreen;
 }
 
 hr {
@@ -71,8 +71,9 @@ hr {
 }
 
 hr:after {
-  background: #fff;
+  background: floralwhite;
   content: 'DE LA NOUVEAUTÉ';
+  font-size : 20px;
   color : green;
   padding: 0 4px;
   position: relative;
