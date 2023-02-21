@@ -4,6 +4,8 @@ const titre = ref("");
 const qtestock = ref("");
 const prix = ref("");
 const emit = defineEmits(["addLivre"]);
+
+
 </script>
 
 <template>
@@ -46,7 +48,7 @@ const emit = defineEmits(["addLivre"]);
         border-right: 3px solid seagreen;
       "
     />
-    <input type="submit" value="Ajouter" />
+    <input type="submit" value="Ajouter"  />
   </form>
 </template>
 
