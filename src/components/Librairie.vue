@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, onMounted } from "vue";
+import {reactive, onMounted} from "vue";
 import Livre from "../Livre.js";
 import LibrairieForm from "./LibrairieForm.vue";
 import LibrairieItem from "./LibrairieItem.vue";
@@ -24,51 +24,51 @@ function handlerAdd(titre, qtestock, prix) {
     }),
   };
   fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      getToDos();
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+        getToDos();
+      })
+      .catch((error) => console.log(error));
 }
 
 
 //Fonction rechercher OK
 function rechercherLivre(val) {
-  let fetchOptions = { method: "GET" };
+  let fetchOptions = {method: "GET"};
 
   fetch(url + "?search=" + val, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      listeLivresRecherche.splice(0, listeLivresRecherche.length)
-      dataJSON.forEach((v) =>
-        listeLivresRecherche.push(new Livre(v.id, v.titre, v.qtestock, v.prix))
-      );
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+        listeLivresRecherche.splice(0, listeLivresRecherche.length)
+        dataJSON.forEach((v) =>
+            listeLivresRecherche.push(new Livre(v.id, v.titre, v.qtestock, v.prix))
+        );
+      })
+      .catch((error) => console.log(error));
 }
 
 //Fonction récuperer les livres OK
 function getToDos() {
-  let fetchOptions = { method: "GET" };
+  let fetchOptions = {method: "GET"};
 
   fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      listeLivres.splice(0, listeLivres.length)
-      dataJSON.forEach((v) =>
-        listeLivres.push(new Livre(v.id, v.titre, v.qtestock, v.prix))
-      );
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+        listeLivres.splice(0, listeLivres.length)
+        dataJSON.forEach((v) =>
+            listeLivres.push(new Livre(v.id, v.titre, v.qtestock, v.prix))
+        );
+      })
+      .catch((error) => console.log(error));
 }
 
 onMounted(() => {
@@ -82,14 +82,14 @@ function handlerDelete(id) {
     method: "DELETE",
   };
   fetch(url + "/" + id, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      getToDos();
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+        getToDos();
+      })
+      .catch((error) => console.log(error));
 }
 
 //Fonction incrementer OK
@@ -106,13 +106,13 @@ function handlerIncrementer(livre) {
     }),
   };
   fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+      })
+      .catch((error) => console.log(error));
 }
 
 //Fonction decrementer PAS OK
@@ -129,17 +129,17 @@ function handlerDecrementer(livre) {
     }),
   };
   fetch(url, fetchOptions)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataJSON) => {
-      console.log(dataJSON);
-      if (livre.qtestock == 0) {
-        handlerDelete(livre.id);
-      }
-      getToDos();
-    })
-    .catch((error) => console.log(error));
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataJSON) => {
+        console.log(dataJSON);
+        if (livre.qtestock == 0) {
+          handlerDelete(livre.id);
+        }
+        getToDos();
+      })
+      .catch((error) => console.log(error));
 }
 </script>
 
@@ -148,22 +148,14 @@ function handlerDecrementer(livre) {
   <h4>Nos livres en stock actuellement :</h4>
   <ul>
     <LibrairieItem v-for="livre of listeLivres" :key="livre.id" :livre="livre" @deleteL="handlerDelete"
-      @incrementer="handlerIncrementer" @decrementer="handlerDecrementer" />
+                   @incrementer="handlerIncrementer" @decrementer="handlerDecrementer"/>
   </ul>
   <LibrairieForm @addLivre="handlerAdd"></LibrairieForm>
   <LibrairieRecherche @rechercheLivre="rechercherLivre"/>
-      <LibrairieItem v-for="livre of listeLivresRecherche" :key="livre.id" :livre="livre" @deleteL="handlerDelete"
-      @incrementer="handlerIncrementer" @decrementer="handlerDecrementer" />
+  <LibrairieItem v-for="livre of listeLivresRecherche" :key="livre.id" :livre="livre" @deleteL="handlerDelete"
+                 @incrementer="handlerIncrementer" @decrementer="handlerDecrementer"/>
 </template>
 
 <style scoped>
-h4 {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: rgb(38, 90, 38);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
 </style>
 
