@@ -12,7 +12,7 @@ import LibrairieHeader from "./components/LibrairieHeader.vue";
 body {
   background-image: url("fond_vert.jpg");
   background-size: cover;
-  background-position: 25% 75%;
+  background-position: 30% 70%;
   background-repeat: no-repeat;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
