@@ -18,13 +18,13 @@ body {
 }
 
 h4 {
-  color: rgb(38, 90, 38);
+  color: 	maroon;
   margin-top: 20px;
   font-size: 20px;
 }
 
 p {
-  color: darkgreen;
+  color: saddlebrown;
   font-weight: bold;
 }
 
@@ -40,7 +40,7 @@ hr {
 hr:after {
   background: floralwhite;
   font-size: 20px;
-  color: green;
+  color: brown;
   padding: 0 4px;
   position: relative;
   top: -13px;
@@ -68,5 +68,21 @@ blockquote p::before {
 
 blockquote p::after {
   content: '\201D';
+}
+
+button, input[type=submit]{
+  background-color: floralwhite;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 3px;
+  padding: 2px 6px;
+}
+
+button:hover , input[type=submit]:hover{
+  background-color: chocolate;
+}
+.citation{
+  text-align: center;
 }
 </style>

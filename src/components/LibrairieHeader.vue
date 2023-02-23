@@ -26,7 +26,6 @@
 </template>
 
 <style scoped>
-
 .bandeau {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,7 +45,7 @@ hr:after {
 }
 
 h1 {
-  color: rgb(38, 90, 38);
+  color: maroon;
 }
 
 p {

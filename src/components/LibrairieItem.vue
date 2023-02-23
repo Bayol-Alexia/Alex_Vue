@@ -17,18 +17,6 @@ const emit = defineEmits(["deleteL", "incrementer", "decrementer"]);
 </template>
 
 <style scoped>
-button {
-  background-color: lightyellow;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 3px;
-}
-
-button:hover {
-  background-color: peachpuff;
-}
-
 ul {
   padding-left: 2rem;
   list-style-type: none;
@@ -43,5 +31,4 @@ ul li {
   color: black;
   font-weight: bold;
 }
-
 </style>

@@ -13,7 +13,7 @@ const emit = defineEmits(["addLivre"]);
   <hr>
   <blockquote>
     <cite>
-      <p class="citation" >Le monde est un livre, et ceux qui ne voyagent pas n'en lisent qu'une page. </p>
+      <p class="citation">Le monde est un livre, et ceux qui ne voyagent pas n'en lisent qu'une page. </p>
     </cite>
   </blockquote>
   <form @submit.prevent="$emit('addLivre', titre, qtestock, prix)">
@@ -24,9 +24,7 @@ const emit = defineEmits(["addLivre"]);
         v-model="titre"
         placeholder="Le titre du livre ?"
         style="
-        border-bottom: 3px solid seagreen;
-        border-top: 3px solid seagreen;
-        border-left: 3px groove seagreen;
+       border: none; border-bottom: 3px solid maroon; border-right: 3px dotted maroon; background-color: floralwhite;
       "
     />
     <input
@@ -36,9 +34,7 @@ const emit = defineEmits(["addLivre"]);
         placeholder="La quantité en stock ?"
         min="0"
         style="
-        border-bottom: 3px solid seagreen;
-        border-top: 3px solid seagreen;
-        border-left: 3px groove seagreen;
+        border: none; border-bottom: 3px solid maroon; border-right: 3px dotted maroon; background-color: floralwhite;
       "
     />
     <input
@@ -48,10 +44,7 @@ const emit = defineEmits(["addLivre"]);
         placeholder="Le prix unitaire (en €) ?"
         min="0"
         style="
-        border-bottom: 3px solid seagreen;
-        border-top: 3px solid seagreen;
-        border-left: 3px groove seagreen;
-        border-right: 3px solid seagreen;
+        border: none; border-bottom: 3px solid maroon; background-color: floralwhite;
       "
     />
     <input type="submit" value="Ajouter"/>
@@ -61,9 +54,5 @@ const emit = defineEmits(["addLivre"]);
 <style scoped>
 hr:after {
   content: 'DE LA NOUVEAUTÉ';
-}
-
-.citation{
-  text-align: center;
 }
 </style>

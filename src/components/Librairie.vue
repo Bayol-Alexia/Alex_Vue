@@ -156,6 +156,4 @@ function handlerDecrementer(livre) {
                  @incrementer="handlerIncrementer" @decrementer="handlerDecrementer"/>
 </template>
 
-<style scoped>
-</style>
 
